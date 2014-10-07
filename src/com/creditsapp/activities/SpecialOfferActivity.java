@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 import com.creditsapp.R;
 import com.creditsapp.fragments.BackAndSettingsFragment;
@@ -21,7 +22,7 @@ import com.creditsapp.fragments.BackAndSettingsFragment;
  * Time: 11:00
  * To change this template use File | Settings | File Templates.
  */
-public class SpecialOfferActivity extends Activity implements View.OnTouchListener, View.OnClickListener {
+public class SpecialOfferActivity extends Activity implements View.OnTouchListener, View.OnClickListener{
 
     private static final String LOG_TAG = "SpecialOfferActivity";
     private ViewFlipper flipper;
@@ -40,33 +41,42 @@ public class SpecialOfferActivity extends Activity implements View.OnTouchListen
         initFlipper();
     }
 
-       private void addFragment(){
-           FragmentTransaction frgTrans = getFragmentManager().beginTransaction();
-           BackAndSettingsFragment backAndSettingsFragment = new BackAndSettingsFragment();
-           frgTrans.add(R.id.spcialFrgView, backAndSettingsFragment);
-           frgTrans.commit();
-       }
+    private void addFragment(){
+        FragmentTransaction frgTrans = getFragmentManager().beginTransaction();
+        BackAndSettingsFragment backAndSettingsFragment = new BackAndSettingsFragment();
+        frgTrans.add(R.id.spcialFrgView, backAndSettingsFragment);
+        frgTrans.commit();
+    }
 
 
     private void initFlipper(){
         View special_repair = inflater.inflate(R.layout.special_repair,null,false);
-         special_repair.setOnClickListener(this);
+        TextView repairText = (TextView) special_repair.findViewById(R.id.textRepair);
+        repairText.setOnClickListener(this);
         View special_relax = inflater.inflate(R.layout.special_relax,null,false);
-          special_relax.setOnClickListener(this);
+        TextView relaxText = (TextView) special_relax.findViewById(R.id.relaxatingText);
+        relaxText.setOnClickListener(this);
         View special_shopping = inflater.inflate(R.layout.special_shopping,null,false);
-             special_shopping.setOnClickListener(this);
+        TextView shopingText = (TextView) special_shopping.findViewById(R.id.shopingText);
+        shopingText.setOnClickListener(this);
         View special_credit_for_gift = inflater.inflate(R.layout.special_credit_for_gift,null,false);
-             special_credit_for_gift.setOnClickListener(this);
+        TextView presentText = (TextView) special_credit_for_gift.findViewById(R.id.prezentText);
+        presentText.setOnClickListener(this);
         View special_credit_for_wedding = inflater.inflate(R.layout.special_credit_for_wedding,null,false);
-             special_credit_for_wedding.setOnClickListener(this);
+        TextView weddingText = (TextView) special_credit_for_wedding.findViewById(R.id.weddingText);
+        weddingText.setOnClickListener(this);
         View special_closure_credit = inflater.inflate(R.layout.special_closure_credit,null,false);
-             special_closure_credit.setOnClickListener(this);
+        TextView closeCreditText = (TextView) special_closure_credit.findViewById(R.id.closeCreditText);
+        closeCreditText.setOnClickListener(this);
         View special_municipal_debts = inflater.inflate(R.layout.special_municipal_debts,null,false);
-             special_municipal_debts.setOnClickListener(this);
+        TextView municipalText = (TextView) special_municipal_debts.findViewById(R.id.municipalText);
+        municipalText.setOnClickListener(this);
         View special_for_study = inflater.inflate(R.layout.special_for_study,null,false);
-             special_for_study.setOnClickListener(this);
+        TextView specialStadyText = (TextView) special_for_study.findViewById(R.id.specialStadyText);
+        specialStadyText.setOnClickListener(this);
         View special_for_treatment = inflater.inflate(R.layout.special_for_treatment,null,false);
-             special_for_treatment.setOnClickListener(this);
+        TextView specialTreatmentText = (TextView) special_for_treatment.findViewById(R.id.specialTreatmentText);
+        specialTreatmentText.setOnClickListener(this);
 
         flipper.addView(special_repair);
         flipper.addView(special_relax);
@@ -94,7 +104,7 @@ public class SpecialOfferActivity extends Activity implements View.OnTouchListen
                 float toPosition = event.getX();
 
                 float deltaX = firstTouch - toPosition;
-
+                Log.d(LOG_TAG, "touch");
                 if (deltaX > 50) {
                     flipper.setInAnimation(AnimationUtils.loadAnimation(this, R.anim.go_next_in));
                     flipper.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.go_next_out));
@@ -110,13 +120,44 @@ public class SpecialOfferActivity extends Activity implements View.OnTouchListen
         return true;
     }
 
+
     @Override
-    public void onClick(View view) {
-        Log.d(LOG_TAG, "click start "+ view.getId());
+    public void onClick(View v) {
 
-              Intent startRegistrationProfileIntent = new Intent(this, StartRegistrationProfileActivity.class);
-        startRegistrationProfileIntent.addFlags(1);
-              startActivity(startRegistrationProfileIntent);
+        switch(v.getId()){
+            case R.id.textRepair :
+                Log.d(LOG_TAG, "click");
+                startRegstrationActivity();
+                break;
+            case R.id.relaxatingText :
 
+                break;
+            case R.id.shopingText :
+
+                break;
+            case R.id.prezentText :
+
+                break;
+            case R.id.weddingText :
+
+                break;
+            case R.id.closeCreditText :
+
+                break;
+            case R.id.municipalText :
+
+                break;
+            case R.id.specialStadyText:
+
+                break;
+            case R.id.specialTreatmentText:
+
+                break;
+        }
+
+    }
+    private void startRegstrationActivity(){
+        Intent startRegistrationIntent = new Intent(this, StartRegistrationProfileActivity.class);
+        startActivity(startRegistrationIntent);
     }
 }

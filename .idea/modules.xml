@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CreditsApp.iml" filepath="$PROJECT_DIR$/CreditsApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../develop/adt-bundle-windows-x86_64-20140702/sdk/extras/android/support/v7/appcompat/appcompat.iml" filepath="$PROJECT_DIR$/../../develop/adt-bundle-windows-x86_64-20140702/sdk/extras/android/support/v7/appcompat/appcompat.iml" />
     </modules>
   </component>
 </project>

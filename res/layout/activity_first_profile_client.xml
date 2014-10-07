@@ -26,7 +26,7 @@
             android:orientation="horizontal"
             android:gravity="center_horizontal"
             android:layout_weight="5"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
            >
 
         <TextView
@@ -81,7 +81,7 @@
                 android:layout_height="40dp"
                 android:layout_width="300dp"
                 android:background="@drawable/field"
-                android:layout_marginBottom="10dp"
+
                 android:id="@+id/yorTelephone"
                 android:inputType="phone"></EditText>
 

@@ -7,5 +7,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Кредит на подарок"
-            android:id="@+id/textView" android:textSize="35dp" android:layout_gravity="center"/>
+            android:id="@+id/prezentText" android:textSize="35dp" android:layout_gravity="center"/>
 </FrameLayout>

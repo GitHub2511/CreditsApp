@@ -7,6 +7,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Личения"
-            android:id="@+id/textView" android:layout_gravity="center" android:singleLine="false"
+            android:id="@+id/specialTreatmentText" android:layout_gravity="center" android:singleLine="false"
             android:textSize="35dp"/>
 </FrameLayout>
