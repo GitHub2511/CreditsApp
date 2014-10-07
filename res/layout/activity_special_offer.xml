@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_layout_offer_act"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#52ddff">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <FrameLayout
+                android:id="@+id/spcialFrgView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </FrameLayout>
+    </LinearLayout>
+    <ViewFlipper
+        android:id="@+id/flipper_offer_act"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/green_yellow">
+
+    <LinearLayout
+            android:id="@+id/topLinerLoyaut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        <FrameLayout
+                android:id="@+id/frgViewStartRegist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="@string/how_match_take"
+                android:layout_weight="2">
+        </TextView>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="3"
+                android:textSize="20dp"
+                android:background="@drawable/field"
+                android:id="@+id/enterYorSum"
+                android:inputType="number">
+        </EditText>
+        <TextView
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="@string/grn">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:text="@string/sum">
+
+        </TextView>
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/calculationSum">
+        </TextView>
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/sum_month"></TextView>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="25dp">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/checked_credit">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            >
+        <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/start_button"
+                android:id="@+id/startCheckedButton"
+                android:background="@drawable/calculator">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="25dp" >
+        </TextView>
+        <CheckBox
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkedYorInfo">       </CheckBox>
+
+
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/access_is_allowed"
+                android:paddingRight="25dp"
+                android:paddingLeft="25dp"
+                >
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

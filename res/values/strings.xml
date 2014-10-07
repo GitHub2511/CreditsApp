@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Agent StartRegistrationProfileActivity -->
+    <string name="app_name">CreditsApp</string>
+    <string name="save_button">Сохранить</string>
+    <string name="continue_button">Продолжить</string>
+    <string name="telephone_text_view">Телефон</string>
+    <string name="name_user_text_view">Имя</string>
+    <string name="week_pay_text_view">Eженедельный платеж 700 грн</string>
+    <string name="month_pay_text_view">Eжемесячный платеж 700 грн</string>
+    <string name="pay_text_view"> грн</string>
+    <string name="enter_sum_text_view">Введите желаемую сумму</string>
+    <string name="menu_button">-_-</string>
+    <string name="return_button">return</string>
+
+    <!--start_registration-->
+    <string name="how_match_take">Какая сумма Вас интересует</string>
+    <string name="grn">грн</string>
+    <string name="sum">Приблезительный платеж составит</string>
+    <string name="sum_month">грн в месяц</string>
+    <string name="access_is_allowed"> Соглашаюсь на обработку персональных данных компанией "Грааль кредит"</string>
+    <string name="checked_credit">Проверить возможность получения кредита</string>
+    <string name="start_button">C т а р т</string>
+
+    <!--first_profile_client-->
+    <string name="yor_name">Ваше имя</string>
+    <string name="yor_telephone">Номер телeфона</string>
+    <string name="yor_birthday">Дата рождения</string>
+    <string name="yor_location">Выбор местонахождения</string>
+    <string name="why_you_need_take_credit">Для чего Вам нужен кредит</string>
+    <string name="chois_yor_activity">Выберите вид Вашей деятельности</string>
+    <string name="hired_employee">Наемный сотрудник</string>
+    <string name="businesswoman">Предприниматель</string>
+    <string name="pensioner">Пенсонер</string>
+    <string name="now_not_work">Сейчас нет работы</string>
+
+    <!--second_profile_client-->
+    <string name="yor_form_of_employment">Укажите форму трудоустройства</string>
+    <string name="yor_official_income">Ваш официальный доход</string>
+    <string name="work_on_contracts">Работа по срочному трудовому договору</string>
+    <string name="work_on_contracts_tip">Трудовая книжка находится дома</string>
+    <string name="work_official">Официальная работа</string>
+    <string name="work_official_tip">Трудовая книжка у работодателя</string>
+    <string name="provide_sertificat_calculating">Могу предоставить справку о начислении заработной платы </string>
+    <string name="provide_sertificat_pension_calculating">Могу предоставить справку из пенсионного о начислении пенсии</string>
+    <string name="provide_declaration_income_generation">Могу предоставить декларацию о получении дохода</string>
+    <string name="how_long_registered_entrepreneur">Давно ли вы зарегистрированы как предприниматель?</string>
+    <string name="less_twenteen_months">Менее 12 мес</string>
+    <string name="more_twenteen_months">Более 12 мес</string>
+    <string name="provide_registration_incom_generation">Могу предоставить декларацию о получении дохода</string>
+    <string name="yor_pey">Ваш доход</string>
+    <string name="yor_pey_add">Ваш дополнительный доход</string>
+    <string name="yor_pension">Укажыте розмер пенсии</string>
+    <string name="yor_official_pey">Укажыте розмер официального дохода</string>
+    <string name="yor_work_salary">Укажыте розмер зарплаты</string>
+
+    <!--activity_registration-->
+    <string name="name_authorization_button">Aвторизироватся</string>
+    <string name="name_credit_broker_button">Cтать кредитным брокером</string>
+
+    <!--activity_authorization-->
+    <string name="login_user">Логин</string>
+    <string name="password_user">Пароль</string>
+    <string name="false_password_or_login">Не могу вспомнить логин или пароль</string>
+
+    <!--activity_web_registration-->
+    <string name="yor_mail">E-mail</string>
+    <string name="registratedToRecomendation">Я регистрируюсь по рекомендации</string>
+    <string name="name_registration_button">Зарегистрироваться</string>
+
+    <!--activity_web_registration_recomendation-->
+    <string name="from_user">От пользователя:</string>
+
+    <!--Menu-->
+    <string-array name="planets_array">
+        <item>Главная</item>
+        <item>Мои клиенты</item>
+        <item>Мои кредиты</item>
+        <item>Конструктор банков</item>
+
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="item1">Item1</string>
+    <string name="item2">Item2</string>
+    <string name="item3">Item3</string>
+    <string name="item4">Item4</string>
+</resources>

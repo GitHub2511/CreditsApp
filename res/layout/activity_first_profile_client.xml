@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:background="@drawable/green_yellow">
+    <LinearLayout
+            android:id="@+id/topLinerLoyaut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <FrameLayout
+                android:id="@+id/firstProfileFrgView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_weight="5"
+            android:layout_marginTop="30dp"
+           >
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/yor_name"
+                ></TextView>
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="5"
+            android:gravity="center_horizontal"
+           >
+
+        <EditText
+                android:layout_height="40dp"
+                android:layout_width="300dp"
+                android:id="@+id/yorName"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/field"
+                android:inputType="textPersonName"></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            >
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                android:text="@string/yor_telephone"></TextView>
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:gravity="center_horizontal"
+           >
+        <EditText
+                android:layout_height="40dp"
+                android:layout_width="300dp"
+                android:background="@drawable/field"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/yorTelephone"
+                android:inputType="phone"></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            >
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/yor_birthday"
+                android:id="@+id/yorData"></TextView>
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:id="@+id/birthdayLayout"
+            android:gravity="center_horizontal"
+           >
+
+
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_weight="5"
+           >
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/yor_location"
+                android:id="@+id/yorLocation">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/notSpecialOfferLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:id="@+id/kindLayout"
+            android:orientation="vertical">
+
+    </LinearLayout>
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_weight="5"
+           >
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/chois_yor_activity"
+                android:id="@+id/yorChoisActivity">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/kindActivityLayout"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp"></LinearLayout>
+
+
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+
+            >
+        <FrameLayout
+                android:id="@+id/frgViewFirstPofile"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp">
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

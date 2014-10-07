@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:id="@+id/employee"
+                      android:text="@string/hired_employee"></TextView>
+
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/businesswoman"
+            android:text="@string/businesswoman"></TextView>
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/pensioner"
+            android:text="@string/pensioner"></TextView>
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/notWorked"
+            android:text="@string/now_not_work"></TextView>
+
+
+
+
+
+
+
+</LinearLayout>
