@@ -18,7 +18,7 @@ import com.creditsapp.fragments.FrgRoundButton;
 import java.util.Calendar;
 
 
-public class FirstProfileClientActivity extends Activity implements View.OnClickListener, View.OnKeyListener {
+public class FirstProfileClientActivity extends Activity implements View.OnClickListener{
 
     private static final String LOG_TAG = "FirstProfileClientActivity";
     public static int goToSecondActivity = 0;
@@ -51,14 +51,11 @@ public class FirstProfileClientActivity extends Activity implements View.OnClick
 
 
         enterName = (EditText) findViewById(R.id.yorName);
-        enterName.setOnKeyListener(this);
         enterTelephone = (EditText) findViewById(R.id.yorTelephone);
-        enterTelephone.setOnKeyListener(this);
         yorLocation = (TextView) findViewById(R.id.yorLocation);
         yorLocation.setOnClickListener(this);
         yorChoisdActivity = (TextView) findViewById(R.id.yorChoisActivity);
         yorChoisdActivity.setOnClickListener(this);
-        birthdayLinearLayout = (LinearLayout) findViewById(R.id.birthdayLayout);
         yorData = (TextView) findViewById(R.id.yorData);
         yorData.setOnClickListener(this);
         addFragment();
@@ -94,8 +91,8 @@ public class FirstProfileClientActivity extends Activity implements View.OnClick
         switch (v.getId()) {
 
             case R.id.yorLocation:
-                String[] yorKindActivity = new String[]{"Наемный сотрудник", "Предприниматель", "Пенсионер", "Клиент не работает"};
-                showTownList(yorKindActivity);
+//                String[] yorKindActivity = new String[]{"Наемный сотрудник", "Предприниматель", "Пенсионер", "Клиент не работает"};
+//                showTownList(yorKindActivity);
                 break;
 
             case 1:
@@ -106,7 +103,7 @@ public class FirstProfileClientActivity extends Activity implements View.OnClick
             case R.id.yorChoisActivity:
                 indexYorActivityClick ++;
                 if(indexYorActivityClick == 1){
-              createActivitisView();
+                    createActivitisView();
                 }else{
                     removeActivitisView();
                     indexYorActivityClick = 0;
@@ -115,79 +112,54 @@ public class FirstProfileClientActivity extends Activity implements View.OnClick
                 break;
 
             case R.id.notWorked:
-                if(myTelephone.length() != 0 && myName.length() != 0){
+                if(checkedEditTexts()){
 
                     goToSecondActivity ++;
 
-                Intent waitingIntent = new Intent(this, WaitingActivity.class);
-                startActivity(waitingIntent);
+                    Intent waitingIntent = new Intent(this, WaitingActivity.class);
+                    startActivity(waitingIntent);
                 }
-             break;
+                break;
 
             case R.id.businesswoman:
-                if(myTelephone.length() != 0 && myName.length() != 0){
+                if(checkedEditTexts()){
 
                     goToSecondActivity ++;
 
-                 createSecondProfileIntent(2);
+                    createSecondProfileIntent(2);
                 }
                 break;
             case R.id.pensioner:
-                if(myTelephone.length() != 0 && myName.length() != 0){
+                if(checkedEditTexts()){
 
                     goToSecondActivity ++;
 
-                createSecondProfileIntent(3);
+                    createSecondProfileIntent(3);
                 }
                 break;
             case R.id.employee:
-                if(myTelephone.length() != 0 && myName.length() != 0){
+                if(checkedEditTexts()){
 
                     goToSecondActivity ++;
 
-                createSecondProfileIntent(1);
+                    createSecondProfileIntent(1);
                 }
                 break;
             case R.id.yorData:
-                   createdEditDataView();
-                    createDatePicker();
 
-                   birthday = dataEditT.getText().toString();
-                Log.d(LOG_TAG, "data " + dataEditT.getText());
+
                 if(dataEditT == null){
                     Log.d(LOG_TAG,"null "+birthday);
                 }
         }
     }
-               private void createSecondProfileIntent(int flags){
-                   Intent secondProfileIntent = new Intent(this, SecondProfileClientActivity.class);
-                   secondProfileIntent.addFlags(flags);
-                   startActivity(secondProfileIntent);
-                    goToSecondActivity = 1;
-               }
-
-    @Override
-    public boolean onKey(View v, int keyCode, KeyEvent event) {
-        Log.d(LOG_TAG, "woring now");
-
-        if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) {
-            Log.d(LOG_TAG, "enter_key_called");
-            if (enterName != null) {
-                Log.d(LOG_TAG, "go to server");
-                myName = enterName.getText().toString();
-               Log.d(LOG_TAG, "myname "+ myName);
-
-            }
-            if(enterTelephone != null){
-                myTelephone = enterTelephone.getText().toString();
-                Log.d(LOG_TAG,"My telephone "+myTelephone);
-            }
-
-
-
-        }
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    private void createSecondProfileIntent(int flags){
+        Intent secondProfileIntent = new Intent(this, SecondProfileClientActivity.class);
+        secondProfileIntent.addFlags(flags);
+        startActivity(secondProfileIntent);
+        goToSecondActivity = 1;
     }
+
 
     public void showTownList(String[] array) {
 
@@ -238,33 +210,17 @@ public class FirstProfileClientActivity extends Activity implements View.OnClick
 
 
 
-    private void createdEditDataView(){
-             birthdayLinearLayout.addView(getLayoutInflater().inflate(R.layout.activity_first_profile_edit_component, null, false));
-        dataEditT = (EditText) findViewById(R.id.dataEditText);
+
+
+    private boolean checkedEditTexts(){
+        if(enterName != null && enterTelephone != null){
+            myName = enterName.getText().toString();
+            myTelephone = enterTelephone.getText().toString();
+            if(myName.length() > 0 && myTelephone.length() > 0){
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
-    private void createDatePicker(){
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-
-
-
-        DatePickerDialog dpd = new DatePickerDialog(this,
-                new DatePickerDialog.OnDateSetListener() {
-
-                    @Override
-                    public void onDateSet(DatePicker view, int year,
-                                          int monthOfYear, int dayOfMonth) {
-                      dataEditT.setText(dayOfMonth + "-"
-                              + (monthOfYear + 1) + "-" + year);
-
-                    }
-                }, mYear, mMonth, mDay);
-
-
-        dpd.show();
-
-    }
-
 }

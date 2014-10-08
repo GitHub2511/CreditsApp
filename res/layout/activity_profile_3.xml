@@ -23,7 +23,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Щомісячні витрати"
+                android:text="@string/months_cost"
                 android:id="@+id/textView" android:textSize="25dp"/>
         <LinearLayout
                 android:orientation="horizontal"
@@ -37,13 +37,13 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="грн"
+                    android:text="@string/grn"
                     android:id="@+id/textView2" android:textSize="20dp"/>
         </LinearLayout>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(Ваші витрати на місяць на поточні потреби)"
+                android:text="@string/small_text"
                 android:id="@+id/textView1" android:textSize="12dp" android:layout_marginBottom="10dp"/>
         <LinearLayout
                 android:orientation="vertical"
@@ -59,7 +59,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ви користуєтеся кредитами?"
+                android:text="@string/you_use_credits"
                 android:id="@+id/textView3" android:textSize="21dp"/>
         <LinearLayout
                 android:orientation="horizontal"
@@ -68,8 +68,8 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ні, ніколи не було"
-                    android:id="@+id/tvActProfileNoCredit" android:textSize="20dp"/>
+                    android:text="@string/not_use_credits"
+                    android:id="@+id/tvActProfileNoCreditNever" android:textSize="20dp"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="vertical"
@@ -82,7 +82,7 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Є закриті кредити"
+                        android:text="@string/have_close_credit"
                         android:id="@+id/tvActProfileCloseCrerit" android:textSize="20dp"/>
             </LinearLayout>
             <LinearLayout
@@ -104,9 +104,21 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Є відкриті кредити"
+                    android:text="@string/have_open_credit"
                     android:id="@+id/tvActProfileOpenCredit" android:textSize="20dp"/>
         </LinearLayout>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/openCreditYesLayout"
+                ></LinearLayout>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/openCreditNoLayout"
+                ></LinearLayout>
     </LinearLayout>
     <FrameLayout
             android:layout_width="fill_parent"

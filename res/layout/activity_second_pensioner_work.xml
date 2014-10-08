@@ -32,11 +32,9 @@
         <CheckBox
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:text="@string/provide_sertificat_calculating"
                 android:id="@+id/pensionerOfficialWorkDoc"></CheckBox>
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/provide_sertificat_calculating"></TextView>
+
 
 
     </LinearLayout>
@@ -67,11 +65,9 @@
         <CheckBox
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:text="@string/provide_sertificat_pension_calculating"
                 android:id="@+id/yorOfficialPensionDoc"></CheckBox>
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/provide_sertificat_pension_calculating"></TextView>
+
 
 
     </LinearLayout>
