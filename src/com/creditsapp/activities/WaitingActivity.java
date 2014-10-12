@@ -30,8 +30,9 @@ public class WaitingActivity extends Activity {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
-                Intent congratulationIntent = new Intent(WaitingActivity.this, CongratulationActivity.class);
-                startActivity(congratulationIntent);
+
+                startActivity(new Intent(WaitingActivity.this, CongratulationActivity.class));
+                overridePendingTransition(R.anim.congratulation,R.anim.push_down_out);
                 finish();
             }
         },3000) ;

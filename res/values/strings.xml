@@ -54,6 +54,16 @@
     <string name="yor_official_pey">Укажыте розмер официального дохода</string>
     <string name="yor_work_salary">Укажыте розмер зарплаты</string>
 
+    <!--tree_profile_client-->
+    <string name="months_cost">Ежемесячные затрати</string>
+    <string name="months_cost_current">Ваши затрати в месяц на текущие потребности</string>
+    <string name="you_use_credits">Вы пользуетесь кредитами?</string>
+    <string name="not_use_credits">Нет никогда не было</string>
+    <string name="have_close_credit">Есть закрытые кредиты</string>
+    <string name="have_open_credit">Есть открытые кредиты</string>
+    <string name="small_text">(Ваші витрати на місяць на поточні потреби)</string>
+    <string name="yor_month_transfer">Ваш ежемесячный платеж по кредитах</string>
+
     <!--activity_registration-->
     <string name="name_authorization_button">Aвторизироватся</string>
     <string name="name_credit_broker_button">Cтать кредитным брокером</string>
@@ -87,8 +97,4 @@
     <string name="item2">Item2</string>
     <string name="item3">Item3</string>
     <string name="item4">Item4</string>
-
-
-
-
 </resources>

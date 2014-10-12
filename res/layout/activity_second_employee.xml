@@ -32,11 +32,8 @@
             <CheckBox
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:text="@string/provide_sertificat_calculating"
                     android:id="@+id/yorOfficialDocum"></CheckBox>
-            <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="@string/provide_sertificat_calculating"></TextView>
 
 
                 </LinearLayout>

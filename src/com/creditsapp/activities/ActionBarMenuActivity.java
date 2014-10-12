@@ -55,13 +55,20 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
                 R.layout.activity_action_bar_menu_drawer_list_item, menuText));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
+        //switch-off tuch in drawerLayout
+       mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+
         // getActionBar().setDisplayHomeAsUpEnabled(true);
         Log.d(LOG_TAG, "9");
         FrameLayout frameLayout1 = (FrameLayout) findViewById(R.id.content_frame);
         frameLayout1.addView(getContent());
         getActionBar().setBackgroundDrawable(getResources().getDrawable(android.R.color.white));
-        getActionBar().setDisplayShowHomeEnabled(false);
+
+        getActionBar().setCustomView(R.layout.actionbar_custom_view_home);
         getActionBar().setDisplayShowTitleEnabled(false);
+        getActionBar().setDisplayShowCustomEnabled(true);
+        getActionBar().setDisplayUseLogoEnabled(false);
+        getActionBar().setDisplayShowHomeEnabled(false);
         getActionBar().setIcon(R.drawable.menu_button);
 
 
@@ -75,16 +82,13 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.d(LOG_TAG, "3");
-
         getMenuInflater().inflate(R.layout.main, menu);
-
         return true;
     }
 
     /* Called whenever we call invalidateOptionsMenu() */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-
         Log.d(LOG_TAG, "4");
         return super.onPrepareOptionsMenu(menu);
     }
@@ -93,7 +97,6 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
     public boolean onOptionsItemSelected(MenuItem item) {
         clickOnMenuButton++;
         Log.d(LOG_TAG, "Worked");
-
         Log.d(LOG_TAG, "group id "+item.getGroupId());
         Log.d(LOG_TAG, "item id "+item.getItemId());
         if(clickOnMenuButton == 1){
@@ -116,7 +119,6 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
         return false;
     }
 
-
     private void selectItem(int position) {
         mDrawerList.setItemChecked(position, true);
         mDrawerLayout.closeDrawer(mDrawerList);
@@ -129,7 +131,6 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         //  mDrawerToggle.syncState();
-
         Log.d(LOG_TAG, "6");
     }
     @Override

@@ -25,7 +25,7 @@ public class CongratulationActivity extends Activity implements View.OnClickList
         super.onCreate(bundle);
         setContentView(R.layout.activity_congratulation);
         addFragment();
-        initView();
+      //  initView();
     }
 
     private void initView(){

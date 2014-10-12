@@ -125,20 +125,9 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkedYorInfo">       </CheckBox>
+                android:id="@+id/checkedYorInfo"
+                android:text="@string/access_is_allowed">       </CheckBox>
 
-
-
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/access_is_allowed"
-                android:paddingRight="25dp"
-                android:paddingLeft="25dp"
-                >
-
-        </TextView>
 
     </LinearLayout>
 

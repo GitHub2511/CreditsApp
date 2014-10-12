@@ -36,7 +36,6 @@
         <activity android:name=".activities.RegistrationUserActivity"/>
         <activity android:name=".activities.AuthorizationActivity"/>
         <activity android:name=".activities.WebRegistrationActivity"/>
-        <activity android:name=".activities.WaitActivity"/>
         <activity android:name=".activities.ActionBarMenuActivity"/>
         <activity android:name=".activities.WaitActivity"/>
 

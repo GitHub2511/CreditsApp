@@ -31,8 +31,8 @@ public class MyActivity extends Activity {
             public void handleMessage(android.os.Message msg) {
                 switch (msg.what) {
                     case START_NEXT_ACTIVITY:
-                        Intent intent = new Intent(MyActivity.this, NavigationActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(MyActivity.this, NavigationActivity.class));
+                        overridePendingTransition(R.anim.push_down_in,R.anim.push_down_out);
                         break;
                 }
             };
