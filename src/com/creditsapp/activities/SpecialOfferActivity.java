@@ -26,7 +26,7 @@ public class SpecialOfferActivity extends Activity implements View.OnTouchListen
 
     private static final String LOG_TAG = "SpecialOfferActivity";
     private ViewFlipper flipper;
-    private float firstTouch;;
+    private float firstTouch;
     private LayoutInflater inflater;
 
     @Override

@@ -13,7 +13,7 @@ import com.creditsapp.R;
  * Time: 11:06
  * To change this template use File | Settings | File Templates.
  */
-public class RegistrationUserActivity extends Activity implements View.OnClickListener {
+public class RegistrationUserActivity extends ActionBarMenuActivity implements View.OnClickListener {
     private Button authorizationButton;
     private Button creditBrokerButton;
 
@@ -24,6 +24,13 @@ public class RegistrationUserActivity extends Activity implements View.OnClickLi
         authorizationButton = (Button) findViewById(R.id.authorizationButton);
         creditBrokerButton = (Button) findViewById(R.id.cretidBrokerButton);
 
+
+    }
+
+
+    @Override
+    protected View getContent() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override

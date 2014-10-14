@@ -25,13 +25,6 @@ public class CongratulationActivity extends Activity implements View.OnClickList
         super.onCreate(bundle);
         setContentView(R.layout.activity_congratulation);
         addFragment();
-      //  initView();
-    }
-
-    private void initView(){
-        Animation anim = AnimationUtils.loadAnimation(this,R.anim.congratulation);
-        LinearLayout animView = (LinearLayout) findViewById(R.id.animViewCongrarulation);
-        animView.setAnimation(anim);
 
     }
 

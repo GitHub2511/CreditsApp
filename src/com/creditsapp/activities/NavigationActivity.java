@@ -1,6 +1,5 @@
 package com.creditsapp.activities;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,9 +14,6 @@ import android.widget.ViewFlipper;
 import com.creditsapp.R;
 import com.creditsapp.fragments.BackAndSettingsFragment;
 
-/**
- * Created by Alex on 14.09.2014.
- */
 public class NavigationActivity extends ActionBarMenuActivity implements OnTouchListener, View.OnClickListener {
     private final String LOG_TAG = "NavigationActivity";
     private float firstTouch;
@@ -25,28 +21,17 @@ public class NavigationActivity extends ActionBarMenuActivity implements OnTouch
     private LayoutInflater inflater;
     private BackAndSettingsFragment backAndSettingsFragment;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_navigation);
+        setContentView(R.layout.activity_navigation);
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_layout);
         mainLayout.setOnTouchListener(this);
 
         flipper = (ViewFlipper) findViewById(R.id.flipper);
         inflater = getLayoutInflater();
-        //   addFragment();
         initFlipper();
-
     }
-
-    private void addFragment() {
-        FragmentTransaction frgTrans = getFragmentManager().beginTransaction();
-        backAndSettingsFragment = new BackAndSettingsFragment(false);
-        frgTrans.add(R.id.navigFrgView, backAndSettingsFragment);
-        frgTrans.commit();
-    }
-
 
     private void initFlipper() {
         View navig_cash = inflater.inflate(R.layout.navig_cash, null, false);
@@ -73,14 +58,12 @@ public class NavigationActivity extends ActionBarMenuActivity implements OnTouch
         TextView tvSpecialOffer = (TextView) navig_special_offer.findViewById(R.id.tvSpecialOffer);
         tvSpecialOffer.setOnClickListener(this);
         flipper.addView(navig_special_offer);
-
     }
 
     protected View getContent() {
         View v = getLayoutInflater().inflate(R.layout.activity_navigation, null, false);
         return v;
     }
-
 
     public boolean onTouch(View view, MotionEvent event) {
 
@@ -90,7 +73,6 @@ public class NavigationActivity extends ActionBarMenuActivity implements OnTouch
                 break;
             case MotionEvent.ACTION_UP:
                 float toPosition = event.getX();
-
                 float deltaX = firstTouch - toPosition;
 
                 if (deltaX > 50) {
@@ -138,5 +120,4 @@ public class NavigationActivity extends ActionBarMenuActivity implements OnTouch
             default:
         }
     }
-
 }

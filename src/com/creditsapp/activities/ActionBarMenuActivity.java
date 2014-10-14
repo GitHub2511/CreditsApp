@@ -1,6 +1,7 @@
 package com.creditsapp.activities;
 
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,19 +59,16 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
         //switch-off tuch in drawerLayout
        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
-        // getActionBar().setDisplayHomeAsUpEnabled(true);
+
         Log.d(LOG_TAG, "9");
         FrameLayout frameLayout1 = (FrameLayout) findViewById(R.id.content_frame);
         frameLayout1.addView(getContent());
-        getActionBar().setBackgroundDrawable(getResources().getDrawable(android.R.color.white));
-
-        getActionBar().setCustomView(R.layout.actionbar_custom_view_home);
-        getActionBar().setDisplayShowTitleEnabled(false);
-        getActionBar().setDisplayShowCustomEnabled(true);
-        getActionBar().setDisplayUseLogoEnabled(false);
-        getActionBar().setDisplayShowHomeEnabled(false);
-        getActionBar().setIcon(R.drawable.menu_button);
-
+        final ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setBackgroundDrawable(getResources().getDrawable(android.R.color.white));
+        actionBar.setCustomView(R.layout.actionbar_custom_view_home);
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayShowCustomEnabled(true);
 
         if (savedInstanceState == null) {
             selectItem(0);
@@ -99,13 +97,16 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
         Log.d(LOG_TAG, "Worked");
         Log.d(LOG_TAG, "group id "+item.getGroupId());
         Log.d(LOG_TAG, "item id "+item.getItemId());
+              if(item.getItemId() == 2131034275){
         if(clickOnMenuButton == 1){
             mDrawerLayout.openDrawer(Gravity.RIGHT);
         }
+
         if(clickOnMenuButton == 2){
             mDrawerLayout.closeDrawer(Gravity.RIGHT);
             clickOnMenuButton = 0;
         }
+
         if (item != null && item.getItemId() == android.R.id.home) {
             if (mDrawerLayout.isDrawerOpen(Gravity.RIGHT)) {
                 mDrawerLayout.closeDrawer(Gravity.RIGHT);
@@ -115,6 +116,10 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
                 mDrawerLayout.openDrawer(Gravity.RIGHT);
                 Log.d(LOG_TAG, "else");
             }
+        }
+    }
+        if(item.getItemId() == 16908332){
+            finish();
         }
         return false;
     }

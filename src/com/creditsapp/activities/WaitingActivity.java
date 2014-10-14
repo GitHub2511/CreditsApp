@@ -38,36 +38,5 @@ public class WaitingActivity extends Activity {
         },3000) ;
 
     }
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        h = new Handler() {
-//            public void handleMessage(android.os.Message msg) {
-//                switch (msg.what) {
-//                    case START_NEXT_ACTIVITY:
-//
-//                        break;
-//                }
-//            };
-//        };
-//
-//
-//        Thread t = new Thread(new Runnable() {
-//            public void run() {
-//                try {
-//                    TimeUnit.SECONDS.sleep(3);
-//                    h.sendEmptyMessage(START_NEXT_ACTIVITY);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//        t.start();
-//
-//
-//    }
-//
-
 
 }
