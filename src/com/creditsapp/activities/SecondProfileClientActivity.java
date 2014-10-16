@@ -12,7 +12,6 @@ import com.creditsapp.R;
 import com.creditsapp.fragments.BackAndSettingsFragment;
 import com.creditsapp.fragments.FrgRoundButton;
 
-
 public class SecondProfileClientActivity extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener, View.OnKeyListener {
     private static final String LOG_TAG = "SecondProfileClientActivity";
     private TextView firstMainQuestion;
@@ -288,7 +287,6 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
 
     private View createPeyContractView() {
         View view = getLayoutInflater().inflate(R.layout.activity_second_work_contract, null, false);
-
         return view;
     }
 
@@ -304,8 +302,6 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
 
     private View createWorkedPensionerVitew() {
         View v = getLayoutInflater().inflate(R.layout.activity_second_pensioner_work, null, false);
-
-
         return v;
     }
 
@@ -347,7 +343,6 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
                     allWritingPensionerWorking(pensionerWorkSalaryString, yorPensionWorkSeleryString, isYorOfficialPensionDoc, isPensionerOfficialWorkDoc);
                     break;
                 case R.id.yorPensionWorkSalary:
-
                     Log.d(LOG_TAG, "yorPensionWorkSalaryString keyClick");
                     yorPensionWorkSeleryString = yorPensionWorkSalary.getText().toString();
                     allWritingPensionerWorking(pensionerWorkSalaryString, yorPensionWorkSeleryString, isYorOfficialPensionDoc, isPensionerOfficialWorkDoc);
@@ -361,7 +356,6 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
                     Log.d(LOG_TAG, "yorPensionSalary keyClick");
                     yorPensionSalaryString = yorPensionSalary.getText().toString();
                     allWritingOfficialWorking(yorPensionEditString, yorPensionSalaryString, isYorOfficialPensionDocument);
-
                     break;
             }
         }
@@ -392,8 +386,5 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
         } else {
             Log.d(LOG_TAG, "not normal");
         }
-
     }
-
-
 }

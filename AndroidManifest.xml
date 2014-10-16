@@ -11,7 +11,7 @@
                  android:icon="@drawable/ic_launcher">
 
         <activity android:name="MyActivity"
-
+                  android:launchMode="singleInstance"
                   android:label="@string/app_name">
 
 
@@ -26,18 +26,17 @@
                 ></activity>
         <activity android:name=".activities.SpecialOfferActivity"></activity>
         <activity android:name=".activities.StartRegistrationProfileActivity"/>
-        <activity android:name=".activities.FirstProfileClientActivity"/>
-        <activity android:name=".activities.FirstProfileClientActivity"/>
+        <activity android:name=".activities.FirstProfileClientActivity" android:launchMode="singleInstance"/>
         <activity android:name=".activities.CongratulationActivity"></activity>
-        <activity android:name=".activities.ThreeProfileActivity"></activity>
-        <activity android:name=".activities.SecondProfileClientActivity"/>
+        <activity android:name=".activities.ThreeProfileActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name=".activities.SecondProfileClientActivity" android:launchMode="singleInstance"/>
         <activity android:name=".activities.WaitingActivity"/>
         <activity android:name=".activities.WaitingActivity"/>
         <activity android:name=".activities.RegistrationUserActivity"/>
         <activity android:name=".activities.AuthorizationActivity"/>
         <activity android:name=".activities.WebRegistrationActivity"/>
         <activity android:name=".activities.ActionBarMenuActivity"/>
-        <activity android:name=".activities.WaitActivity"/>
+
 
 
     </application>

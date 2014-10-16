@@ -17,7 +17,6 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        // frameLayout = (FrameLayout) findViewById(R.id.content_frame);
 
 
     }
@@ -33,6 +32,7 @@ public class MyActivity extends Activity {
                     case START_NEXT_ACTIVITY:
                         startActivity(new Intent(MyActivity.this, NavigationActivity.class));
                         overridePendingTransition(R.anim.push_down_in,R.anim.push_down_out);
+                        finish();
                         break;
                 }
             };

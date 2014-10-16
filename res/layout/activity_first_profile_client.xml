@@ -52,6 +52,7 @@
                     android:layout_width="300dp"
                     android:id="@+id/yorName"
                     android:layout_marginBottom="10dp"
+                    android:imeOptions="actionDone"
                     android:background="@drawable/field"
                     android:inputType="textPersonName"></EditText>
 

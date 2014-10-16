@@ -1,6 +1,5 @@
 package com.creditsapp.activities;
 
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,14 +18,6 @@ import android.widget.ListView;
 import com.creditsapp.MyActivity;
 import com.creditsapp.R;
 
-
-/**
- * Created with IntelliJ IDEA.
- * User: Alex
- * Date: 03.10.14
- * Time: 15:23
- * To change this template use File | Settings | File Templates.
- */
 public abstract class ActionBarMenuActivity extends Activity implements ListView.OnItemClickListener {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -59,12 +50,11 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
         //switch-off tuch in drawerLayout
        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
-
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         Log.d(LOG_TAG, "9");
         FrameLayout frameLayout1 = (FrameLayout) findViewById(R.id.content_frame);
         frameLayout1.addView(getContent());
         final ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setBackgroundDrawable(getResources().getDrawable(android.R.color.white));
         actionBar.setCustomView(R.layout.actionbar_custom_view_home);
         actionBar.setDisplayShowTitleEnabled(false);
@@ -151,11 +141,11 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
 
             Log.d(LOG_TAG,"position"+ position);
             switch (position){
-                case 0:
+                case MAIN_BUTTON:
                     Intent mainIntent = new Intent(ActionBarMenuActivity.this, MyActivity.class);
                     startActivity(mainIntent);
                     break;
-                case 1:
+                case MY_CLIENTS_BUTTON:
                     Intent registrationIntent = new Intent(ActionBarMenuActivity.this, RegistrationUserActivity.class);
                     startActivity(registrationIntent);
                     break;

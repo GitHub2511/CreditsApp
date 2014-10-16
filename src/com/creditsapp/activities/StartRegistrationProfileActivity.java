@@ -18,7 +18,7 @@ import com.creditsapp.fragments.BackAndSettingsFragment;
  * Time: 11:45
  * To change this template use File | Settings | File Templates.
  */
-public class StartRegistrationProfileActivity extends ActionBarMenuActivity implements View.OnClickListener, View.OnKeyListener,
+public class StartRegistrationProfileActivity extends Activity implements View.OnClickListener, View.OnKeyListener,
         CompoundButton.OnCheckedChangeListener {
     private static final String LOG_TAG = "StartRegistrationProfileActivity";
     private EditText yorSum;
@@ -44,14 +44,6 @@ public class StartRegistrationProfileActivity extends ActionBarMenuActivity impl
         checkingStart = (Button) findViewById(R.id.startCheckedButton);
 
         addFragment();
-    }
-
-    @Override
-    protected View getContent() {
-
-        View v = getLayoutInflater().inflate(R.layout.activity_start_registration_profile, null, false);
-
-        return v;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     private void addFragment() {

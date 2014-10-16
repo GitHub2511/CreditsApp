@@ -19,7 +19,7 @@ public class RegistrationUserActivity extends ActionBarMenuActivity implements V
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+
 
         authorizationButton = (Button) findViewById(R.id.authorizationButton);
         creditBrokerButton = (Button) findViewById(R.id.cretidBrokerButton);
@@ -30,7 +30,8 @@ public class RegistrationUserActivity extends ActionBarMenuActivity implements V
 
     @Override
     protected View getContent() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        View v = getLayoutInflater().inflate(R.layout.activity_registration, null, false);
+        return v;
     }
 
     @Override
