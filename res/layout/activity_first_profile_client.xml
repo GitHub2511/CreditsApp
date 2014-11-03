@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="vertical"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:gravity="center_horizontal"
-                  android:background="@drawable/back_phone">
+                  android:background="@drawable/arrowed_back">
         <LinearLayout
                 android:id="@+id/topLinerLoyaut"
                 android:layout_width="match_parent"
@@ -22,114 +18,213 @@
             </FrameLayout>
         </LinearLayout>
         <LinearLayout
-
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_horizontal"
-                android:layout_weight="5"
-                android:layout_marginTop="30dp"
-                >
-
-            <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="@string/yor_name"
-                    ></TextView>
-        </LinearLayout>
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="5"
-                android:gravity="center_horizontal"
-                >
-
-            <EditText
-                    android:layout_height="40dp"
-                    android:layout_width="300dp"
-                    android:id="@+id/yorName"
-                    android:layout_marginBottom="10dp"
-                    android:imeOptions="actionDone"
-                    android:background="@drawable/field"
-                    android:inputType="textPersonName"></EditText>
-
-        </LinearLayout>
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="5"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal"
-                >
-            <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-
-                    android:text="@string/yor_telephone"></TextView>
-        </LinearLayout>
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="5"
-                android:gravity="center_horizontal"
-                >
-            <EditText
-                    android:layout_height="40dp"
-                    android:layout_width="300dp"
-                    android:background="@drawable/field"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/yorTelephone"
-                    android:inputType="phone"></EditText>
-
-        </LinearLayout>
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="5"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal"
-                >
-            <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="@string/yor_birthday"
-                    android:id="@+id/yorData"></TextView>
-        </LinearLayout>
-        <DatePicker
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:calendarViewShown="false"></DatePicker>
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="35dp"
+                >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yor_name"
+                    android:textColor="#000">
+            </TextView>
+        </LinearLayout>
 
         <LinearLayout
-
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_horizontal"
-                android:layout_weight="5"
-                >
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal">
+            <LinearLayout
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/input_phone">
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textSize="30dp"
+                        android:textColor="#000"
+                        android:background="@drawable/input_phone"
+                        android:id="@+id/yorName"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName">
+                </EditText>
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:layout_width="match_parent"
+                        android:text="@string/grn"
+                        android:textColor="#000">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="35dp">
             <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="@string/yor_location"
-                    android:id="@+id/yorLocation">
-
+                    android:text="@string/yor_telephone"
+                    android:textColor="#000">
             </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp">
+            <LinearLayout
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/input_phone">
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_phone"
+                        android:textColor="#000"
+                        android:id="@+id/yorTelephone"
+                        android:imeOptions="actionDone"
+                        android:inputType="number">
+                </EditText>
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="7"
+                        android:text="@string/grn"
+                        android:textColor="#000"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingLeft="35dp"
+                >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yor_birthday"
+                    android:textColor="#000">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+            <LinearLayout
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="6"
+                        android:textSize="30dp"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/input_phone"
+                        android:id="@+id/yorDayEdit"
+                        android:inputType="date">
+                </EditText>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="30dp"
+                        android:visibility="invisible"
+                        android:imeOptions="actionDone"
+                        android:inputType="date">
+                </EditText>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:textSize="30dp"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/input_phone"
+                        android:id="@+id/yorMonthEdit"
+                        android:inputType="date">
+                </EditText>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="30dp"
+                        android:visibility="invisible"
+                        android:imeOptions="actionDone"
+                        android:inputType="date">
+                </EditText>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:textSize="30dp"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/input_phone"
+                        android:id="@+id/yorYearEdit"
+                        android:inputType="date">
+                </EditText>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="5"
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="#000"
+                    android:text="@string/yor_location" />
+
+            <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView1"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/input_phone"
+                    android:textSize="30dp"
+                    android:textColor="#000"
+                    android:ems="10"
+                    android:text="">
+
+            </AutoCompleteTextView>
         </LinearLayout>
 
         <LinearLayout
                 android:id="@+id/notSpecialOfferLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_weight="5"
                 android:orientation="horizontal">
@@ -138,7 +233,7 @@
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:id="@+id/kindLayout"
                 android:orientation="vertical">
@@ -147,7 +242,7 @@
         <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_horizontal"
                 android:layout_weight="5"
@@ -156,32 +251,24 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="@string/chois_yor_activity"
-                    android:id="@+id/yorChoisActivity">
+                    android:id="@+id/yorChoisActivity"
+                    android:textColor="#000">
 
             </TextView>
         </LinearLayout>
+             <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:id="@+id/linearLayout"
+                     android:orientation="horizontal"
+                     android:gravity="center"></LinearLayout>
 
-        <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/kindActivityLayout"
-                android:orientation="vertical"
-                android:layout_marginLeft="50dp"></LinearLayout>
-
-
-        <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-
-                >
             <FrameLayout
                     android:id="@+id/frgViewFirstPofile"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp">
             </FrameLayout>
-        </LinearLayout>
+
 
     </LinearLayout>
-</ScrollView>

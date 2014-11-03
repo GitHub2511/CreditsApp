@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="6">
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3">
+        <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+            <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5">
+            </ImageView>
+            <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/credit_pledgess"
+                    ></ImageView>
+            <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="6">
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+        <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:id="@+id/leftLocationButtonInCreditBonds"
+                android:background="@drawable/arrow_left">
+
+        </Button>
+        <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/creditsButton"
+                android:text="@string/credit_pledges"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_menu_small">
+
+        </Button>
+        <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/rightLocationButtonInCreditBonds"
+                android:background="@drawable/arrow_right"
+                android:layout_weight="3">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="5">
+    </LinearLayout>
+</LinearLayout>

@@ -3,53 +3,131 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_weight="1">
+              android:layout_height="match_parent"
+        android:background="@drawable/arrowed_back">
 
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
         <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/login_user"></TextView>
-        <EditText
                 android:layout_height="wrap_content"
+                android:text="@string/login_user"
+                android:textColor="#000"
+               />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/input_phone">
+        <EditText
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/input_phone"
+                android:textColor="#000"
                 android:id="@+id/loginUserEdit"
-               ></EditText>
-    </LinearLayout>
+                android:inputType="number">
+        </EditText>
+              </LinearLayout>
     <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_weight="1">
-
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
         <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/password_user"></TextView>
-        <EditText
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/passwordEdit"
-                ></EditText>
+                android:text="@string/password_user"
+                android:textColor="#000"
+                />
     </LinearLayout>
     <LinearLayout
-            android:layout_height="match_parent"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
-            android:layout_weight="1"></LinearLayout>
+            android:background="@drawable/input_phone">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/input_phone"
+                android:textColor="#000"
+                android:id="@+id/passwordEdit"
+                android:inputType="number">
+        </EditText>
+    </LinearLayout>
 
+
+
+
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:layout_width="wrap_content">
+
+        <Button
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:visibility="invisible"
+                ></Button>
 
     <Button
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
-            android:id="@+id/falseLoginOrPassword"
-            android:text="@string/false_password_or_login"></Button>
+            android:id="@+id/entrance"
+            android:layout_weight="1"
+            android:text="@string/entrance"
+            android:textColor="#000"
+            android:background="@drawable/yellow_menu_small"></Button>
+        <Button
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:visibility="invisible"></Button>
+    </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="20dp">
+            <Button
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:visibility="invisible"></Button>
 
+            <Button
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:id="@+id/falseLoginOrPassword"
+                    android:text="@string/false_password_or_login"></Button>
+            <Button
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:visibility="invisible"></Button>
+
+            </LinearLayout>
 
 </LinearLayout>

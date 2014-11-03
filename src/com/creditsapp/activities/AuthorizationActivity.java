@@ -17,7 +17,7 @@ import com.creditsapp.R;
  * Time: 12:07
  * To change this template use File | Settings | File Templates.
  */
-public class AuthorizationActivity extends Activity implements View.OnClickListener, View.OnKeyListener{
+public class AuthorizationActivity extends ActionBarMenuActivity implements View.OnClickListener, View.OnKeyListener{
     private static final String LOG_TAG = "AuthorizationActivity";
     private Button falseLoginOrPasswordButton;
     private EditText loginEdit;
@@ -27,12 +27,18 @@ public class AuthorizationActivity extends Activity implements View.OnClickListe
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_authrization);
+
         falseLoginOrPasswordButton = (Button) findViewById(R.id.falseLoginOrPassword);
         loginEdit = (EditText) findViewById(R.id.loginUserEdit);
         loginEdit.setOnKeyListener(this);
         passwordEdit = (EditText) findViewById(R.id.passwordEdit);
         passwordEdit.setOnKeyListener(this);
+    }
+
+    @Override
+    protected View getContent() {
+       View v = getLayoutInflater().inflate(R.layout.activity_authrization, null, false);
+        return v;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override

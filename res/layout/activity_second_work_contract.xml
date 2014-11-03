@@ -1,26 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
+              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="35dp"
+            >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yor_pey"
+                android:textColor="#000">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+        <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/input_phone">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:background="@drawable/input_phone"
+                    android:textColor="#000"
+                    android:id="@+id/editYorPey"
+                    android:inputType="number">
+            </EditText>
             <TextView
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/yorPey"
-                    android:text="@string/yor_pey"></TextView>
-    <EditText
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:inputType="number"
-            android:id="@+id/editYorPey"
-            ></EditText>
-    <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/grn"
-            android:id="@+id/workContractGrn"></TextView>
+                    android:layout_weight="7"
+                    android:layout_width="match_parent"
+                    android:text="@string/grn"
+                    android:textColor="#000">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

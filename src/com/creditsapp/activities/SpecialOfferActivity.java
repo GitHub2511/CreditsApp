@@ -1,6 +1,5 @@
 package com.creditsapp.activities;
 
-import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,23 +21,29 @@ import com.creditsapp.fragments.BackAndSettingsFragment;
  * Time: 11:00
  * To change this template use File | Settings | File Templates.
  */
-public class SpecialOfferActivity extends Activity implements View.OnTouchListener, View.OnClickListener{
+public class SpecialOfferActivity extends ActionBarMenuActivity implements View.OnTouchListener, View.OnClickListener{
 
     private static final String LOG_TAG = "SpecialOfferActivity";
     private ViewFlipper flipper;
-    private float firstTouch;;
+    private float firstTouch;
     private LayoutInflater inflater;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_special_offer);
-        LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_layout_offer_act);
+        LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainLayoutOfferAct);
         mainLayout.setOnTouchListener(this);
-        flipper = (ViewFlipper) findViewById(R.id.flipper_offer_act);
+        flipper = (ViewFlipper) findViewById(R.id.flipperOfferAct);
         inflater = getLayoutInflater();
-        addFragment();
         initFlipper();
+    }
+
+    @Override
+    protected View getContent() {
+
+        View view = getLayoutInflater().inflate(R.layout.activity_special_offer, null, false);
+
+        return view;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     private void addFragment(){

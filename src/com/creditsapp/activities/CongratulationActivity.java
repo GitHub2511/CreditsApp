@@ -1,15 +1,8 @@
 package com.creditsapp.activities;
 
-import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import com.creditsapp.R;
-import com.creditsapp.fragments.BackAndSettingsFragment;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,27 +11,15 @@ import com.creditsapp.fragments.BackAndSettingsFragment;
  * Time: 15:42
  * To change this template use File | Settings | File Templates.
  */
-public class CongratulationActivity extends Activity implements View.OnClickListener {
-    private BackAndSettingsFragment backAndSettingsFragment;
-
+public class CongratulationActivity extends ActionBarMenuActivity implements View.OnClickListener {
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
-        setContentView(R.layout.activity_congratulation);
-        addFragment();
-
     }
-
-    private void addFragment(){
-        FragmentTransaction frgTrans = getFragmentManager().beginTransaction();
-         backAndSettingsFragment = new BackAndSettingsFragment();
-        frgTrans.add(R.id.frgViewCongratulation, backAndSettingsFragment);
-        frgTrans.commit();
-
-        Button btActCongratFinish = (Button) findViewById(R.id.btActCongratFinish);
-        btActCongratFinish.setOnClickListener(this);
-
+    @Override
+    protected View getContent() {
+        View view = getLayoutInflater().inflate(R.layout.activity_congratulation, null, false);
+        return view;
     }
-
     @Override
     public void onClick(View view) {
        switch (view.getId()){

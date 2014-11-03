@@ -1,10 +1,85 @@
-<FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Специальное предложение"
-            android:id="@+id/tvSpecialOffer" android:layout_gravity="center" android:textSize="35dp"
-            android:gravity="center"/>
-</FrameLayout>
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="6">
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3">
+        <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+            <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3">
+            </ImageView>
+            <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/special_propouses"
+                    ></ImageView>
+            <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="6">
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+        <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:id="@+id/leftLocationButtonInSpecialOffer"
+                android:background="@drawable/arrow_left">
+
+        </Button>
+        <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/specialPropouse"
+                android:text="@string/special_propouse"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_menu_small">
+
+        </Button>
+        <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/rightLocationButtonInSpecialOffer"
+                android:background="@drawable/arrow_right"
+                android:layout_weight="3">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="5">
+    </LinearLayout>
+</LinearLayout>

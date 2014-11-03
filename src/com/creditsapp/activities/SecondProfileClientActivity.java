@@ -12,7 +12,7 @@ import com.creditsapp.R;
 import com.creditsapp.fragments.BackAndSettingsFragment;
 import com.creditsapp.fragments.FrgRoundButton;
 
-public class SecondProfileClientActivity extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener, View.OnKeyListener {
+public class SecondProfileClientActivity extends ActionBarMenuActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener, View.OnKeyListener {
     private static final String LOG_TAG = "SecondProfileClientActivity";
     private TextView firstMainQuestion;
     private TextView firstAnswer;
@@ -52,11 +52,11 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
     private String yorPensionSalaryString;
     private CheckBox yorOfficialPensionDocument;
     private boolean isYorOfficialPensionDocument = false;
+    private RadioButton radioButtonFirst;
+    private RadioButton radioButtonSecond;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_profile_client);
-
         firstMainQuestion = (TextView) findViewById(R.id.yorFormOfQuestion);
         firstAnswer = (TextView) findViewById(R.id.notOfficialWork);
         firstAnswer.setOnClickListener(this);
@@ -80,10 +80,17 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
         }
     }
 
+    @Override
+    protected View getContent() {
+
+        View view = getLayoutInflater().inflate(R.layout.activity_second_profile_client, null, false);
+        return view;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     private void addFragment() {
         FragmentTransaction frgTrans = getFragmentManager().beginTransaction();
-        backAndSettingsFragment = new BackAndSettingsFragment();
-        frgTrans.add(R.id.frgViewStartRegist, backAndSettingsFragment);
+      //  backAndSettingsFragment = new BackAndSettingsFragment();
+       // frgTrans.add(R.id.frgViewStartRegist, backAndSettingsFragment);
         FrgRoundButton frgRoundButton = new FrgRoundButton(2);
         frgTrans.add(R.id.frgViewSecondProfile, frgRoundButton);
         frgTrans.commit();
@@ -124,7 +131,7 @@ public class SecondProfileClientActivity extends Activity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-
+                         Log.d(LOG_TAG, "click");
         switch (v.getId()) {
             case R.id.notOfficialWork:
                 if (flag == 1) {

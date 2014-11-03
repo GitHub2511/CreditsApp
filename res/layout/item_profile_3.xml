@@ -17,8 +17,8 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ваш щомісясний платіж по кредитах"
-                android:id="@+id/textView" android:textSize="20dp"/>
+                android:text="@string/yor_month_transfer"
+                android:id="@+id/textView"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
@@ -30,8 +30,8 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="грн"
-                    android:id="@+id/textView1" android:textSize="20dp" android:gravity="bottom"/>
+                    android:text="@string/grn"
+                    android:id="@+id/textView1" android:gravity="bottom"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

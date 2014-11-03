@@ -3,6 +3,7 @@ package com.creditsapp.activities;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -34,32 +35,38 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(LOG_TAG, "go");
         super.onCreate(savedInstanceState);
+        Log.d(LOG_TAG, "start");
         setContentView(R.layout.activity_action_bar_menu_main);
-
-        frameLayout = findViewById(R.id.content_frame);
+        Log.d(LOG_TAG, "1");
+        FrameLayout frameLayout1 = (FrameLayout) findViewById(R.id.contentFrame);
+        Log.d(LOG_TAG, "2");
+        frameLayout1.addView(getContent());
+         Log.d(LOG_TAG, "first");
+        frameLayout = findViewById(R.id.contentFrame);
         menuText = getResources().getStringArray(R.array.planets_array);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mDrawerList = (ListView) findViewById(R.id.rightDrawer);
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.requestDisallowInterceptTouchEvent(false);
         mDrawerList.setAdapter(new ArrayAdapter<String>(this,
                 R.layout.activity_action_bar_menu_drawer_list_item, menuText));
+        Log.d(LOG_TAG, "second");
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
         //switch-off tuch in drawerLayout
        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+       // getActionBar().setDisplayHomeAsUpEnabled(true);
         Log.d(LOG_TAG, "9");
-        FrameLayout frameLayout1 = (FrameLayout) findViewById(R.id.content_frame);
-        frameLayout1.addView(getContent());
-        final ActionBar actionBar = getActionBar();
-        actionBar.setBackgroundDrawable(getResources().getDrawable(android.R.color.white));
+         ActionBar actionBar = getActionBar();
+        //actionBar.setBackgroundDrawable(new ColorDrawable(Color.YELLOW));
         actionBar.setCustomView(R.layout.actionbar_custom_view_home);
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
-
+        actionBar.setIcon(R.drawable.arrow_left);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        Drawable d=getResources().getDrawable(R.drawable.yellow_menu_big);
+        actionBar.setBackgroundDrawable(d);
         if (savedInstanceState == null) {
             selectItem(0);
         }
@@ -87,7 +94,7 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
         Log.d(LOG_TAG, "Worked");
         Log.d(LOG_TAG, "group id "+item.getGroupId());
         Log.d(LOG_TAG, "item id "+item.getItemId());
-              if(item.getItemId() == 2131034275){
+              if(item.getItemId() == R.id.actionMenu){
         if(clickOnMenuButton == 1){
             mDrawerLayout.openDrawer(Gravity.RIGHT);
         }
@@ -108,7 +115,7 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
             }
         }
     }
-        if(item.getItemId() == 16908332){
+        if(item.getItemId() == android.R.id.home){
             finish();
         }
         return false;
@@ -146,7 +153,7 @@ public abstract class ActionBarMenuActivity extends Activity implements ListView
                     startActivity(mainIntent);
                     break;
                 case MY_CLIENTS_BUTTON:
-                    Intent registrationIntent = new Intent(ActionBarMenuActivity.this, RegistrationUserActivity.class);
+                    Intent registrationIntent = new Intent(ActionBarMenuActivity.this, AuthorizationActivity.class);
                     startActivity(registrationIntent);
                     break;
             }

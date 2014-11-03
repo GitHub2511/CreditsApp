@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:id="@+id/mainLayoutVertical"
-              android:background="@drawable/back_phone"
+              android:background="@drawable/arrowed_back"
         >
     <LinearLayout
             android:id="@+id/topLinerLoyaut"
@@ -24,13 +24,16 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/yorFormOfQuestion"
-            android:paddingLeft="25dp"
+            android:paddingLeft="35dp"
             android:paddingTop="10dp"
             ></TextView>
     <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="35dp"
             android:orientation="horizontal">
+
+
 
         <TextView
                 android:layout_height="wrap_content"
@@ -43,7 +46,9 @@
     <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="35dp"
             android:orientation="horizontal">
+
 
         <TextView
                 android:layout_height="wrap_content"

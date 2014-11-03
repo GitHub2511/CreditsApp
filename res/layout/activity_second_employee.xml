@@ -6,56 +6,106 @@
               android:layout_height="match_parent">
 
     <LinearLayout
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="35dp"
+            >
         <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/yor_official_income"></TextView>
+                android:text="@string/yor_official_income">
+        </TextView>
+    </LinearLayout>
 
-        <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/yorWorkSalary"
-                android:inputType="number"></EditText>
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/grn"></TextView>
-
-            </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+        <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/input_phone">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="30dp"
+                    android:background="@drawable/input_phone"
+                    android:id="@+id/yorWorkSalary"
+                    android:inputType="number">
+            </EditText>
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_width="match_parent"
+                    android:text="@string/grn">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
         <LinearLayout
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp">
+
             <CheckBox
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:textSize="14sp"
                     android:text="@string/provide_sertificat_calculating"
                     android:id="@+id/yorOfficialDocum"></CheckBox>
-
-
                 </LinearLayout>
+
     <LinearLayout
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:orientation="horizontal">
-    <TextView
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/yor_pey_add"></TextView>
-        <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:inputType="number"
-                android:id="@+id/yorAddSalary"></EditText>
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="35dp"
+            >
         <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/grn"></TextView>
-
-
+                android:text="@string/yor_pey_add">
+        </TextView>
     </LinearLayout>
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+        <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/input_phone">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="30dp"
+                    android:background="@drawable/input_phone"
+                    android:id="@+id/yorAddSalary"
+                    android:inputType="number">
+            </EditText>
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_width="match_parent"
+                    android:text="@string/grn">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

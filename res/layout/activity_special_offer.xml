@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/main_layout_offer_act"
+        android:id="@+id/mainLayoutOfferAct"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -16,7 +16,7 @@
         </FrameLayout>
     </LinearLayout>
     <ViewFlipper
-        android:id="@+id/flipper_offer_act"
+        android:id="@+id/flipperOfferAct"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 </LinearLayout>

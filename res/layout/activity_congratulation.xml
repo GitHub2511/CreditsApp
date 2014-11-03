@@ -3,7 +3,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+        android:background="@drawable/back_phone">
 
     <LinearLayout
             android:orientation="vertical"
@@ -23,11 +24,11 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" android:layout_weight="1" android:layout_gravity="center"
-                android:background="#ffefb2" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+                android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Вітаємо!"
+                    android:text="Поздравляем!"
                     android:id="@+id/textView" android:layout_gravity="center_horizontal" android:textSize="25dp"/>
             <LinearLayout
                     android:orientation="vertical"
@@ -37,13 +38,13 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="У нас є пропозиція особисто для Вас!!!"
+                    android:text="У нас есть предложение лично для Вас!!!"
                     android:id="@+id/textView1" android:layout_gravity="center_horizontal" android:textSize="20dp"
                     android:gravity="center" android:layout_margin="7dp"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Телефонуйте за номером"
+                    android:text="Подзвоните за номером"
                     android:id="@+id/textView2" android:layout_gravity="center_horizontal" android:textSize="17dp"
                     android:layout_margin="5dp"/>
             <TextView

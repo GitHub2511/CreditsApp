@@ -3,7 +3,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:background="@drawable/back_phone">
+              android:background="@drawable/arrowed_back">
 
     <LinearLayout
             android:id="@+id/topLinerLoyaut"
@@ -19,95 +19,121 @@
     </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_weight="1">
-
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:text="@string/how_match_take"
-                android:layout_weight="2">
-        </TextView>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_weight="3"
-                android:textSize="20dp"
-                android:background="@drawable/field"
-                android:id="@+id/enterYorSum"
-                android:inputType="number">
-        </EditText>
-        <TextView
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:layout_width="match_parent"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:text="@string/grn">
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:layout_marginTop="20dp">
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="20dp"
-                android:text="@string/sum">
-
-        </TextView>
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="2"
-                android:id="@+id/calculationSum">
-        </TextView>
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-
-                android:text="@string/sum_month"></TextView>
-    </LinearLayout>
-    <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="25dp">
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/checked_credit">
-
-        </TextView>
-    </LinearLayout>
-    <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="35dp"
             >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_match_take"
+                android:textColor="#000">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+        <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/input_phone">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="30dp"
+                    android:textColor="#000"
+                    android:background="@drawable/input_phone"
+                    android:id="@+id/enterYorSum"
+                    android:inputType="number">
+            </EditText>
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_width="match_parent"
+                    android:text="@string/grn"
+                    android:textColor="#000">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="35dp">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/sum"
+                android:textColor="#000">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+        <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/input_phone">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_phone"
+                    android:id="@+id/calculationSum"
+                    android:enabled="false"
+                    android:inputType="number">
+            </EditText>
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="7"
+                    android:text="@string/grn"
+                    android:textColor="#000"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="35dp"
+            android:layout_marginBottom="3dp">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/checked_credit"
+                android:textColor="#000">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
         <Button
-                android:layout_height="150dp"
-                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_width="120dp"
                 android:text="@string/start_button"
+                android:textColor="#000"
                 android:id="@+id/startCheckedButton"
-                android:background="@drawable/calculator">
-
+                android:textSize="30dp"
+                android:background="@drawable/button_start">
         </Button>
-
     </LinearLayout>
 
     <LinearLayout
@@ -115,21 +141,19 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center"
+            android:paddingBottom="50dp"
+            android:paddingLeft="35dp"
             android:layout_weight="1">
 
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="25dp" >
-        </TextView>
         <CheckBox
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkedYorInfo"
-                android:text="@string/access_is_allowed">       </CheckBox>
-
+                android:textSize="14sp"
+                android:text="@string/access_is_allowed"
+                android:textColor="#000">
+        </CheckBox>
 
     </LinearLayout>
-
 
 </LinearLayout>

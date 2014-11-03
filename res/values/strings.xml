@@ -8,7 +8,7 @@
     <string name="name_user_text_view">Имя</string>
     <string name="week_pay_text_view">Eженедельный платеж 700 грн</string>
     <string name="month_pay_text_view">Eжемесячный платеж 700 грн</string>
-    <string name="pay_text_view"> грн</string>
+    <string name="pay_text_view">грн</string>
     <string name="enter_sum_text_view">Введите желаемую сумму</string>
     <string name="menu_button">-_-</string>
     <string name="return_button">return</string>
@@ -18,9 +18,9 @@
     <string name="grn">грн</string>
     <string name="sum">Приблезительный платеж составит</string>
     <string name="sum_month">грн в месяц</string>
-    <string name="access_is_allowed"> Соглашаюсь на обработку персональных данных компанией "Грааль кредит"</string>
+    <string name="access_is_allowed">Соглашаюсь на обработку персональных данных компанией "Грааль кредит"</string>
     <string name="checked_credit">Проверить возможность получения кредита</string>
-    <string name="start_button">C т а р т</string>
+    <string name="start_button">Cтарт</string>
 
     <!--first_profile_client-->
     <string name="yor_name">Ваше имя</string>
@@ -41,8 +41,9 @@
     <string name="work_on_contracts_tip">Трудовая книжка находится дома</string>
     <string name="work_official">Официальная работа</string>
     <string name="work_official_tip">Трудовая книжка у работодателя</string>
-    <string name="provide_sertificat_calculating">Могу предоставить справку о начислении заработной платы </string>
-    <string name="provide_sertificat_pension_calculating">Могу предоставить справку из пенсионного о начислении пенсии</string>
+    <string name="provide_sertificat_calculating">Могу предоставить справку о начислении заработной платы</string>
+    <string name="provide_sertificat_pension_calculating">Могу предоставить справку из пенсионного о начислении пенсии
+    </string>
     <string name="provide_declaration_income_generation">Могу предоставить декларацию о получении дохода</string>
     <string name="how_long_registered_entrepreneur">Давно ли вы зарегистрированы как предприниматель?</string>
     <string name="less_twenteen_months">Менее 12 мес</string>
@@ -61,7 +62,8 @@
     <string name="not_use_credits">Нет никогда не было</string>
     <string name="have_close_credit">Есть закрытые кредиты</string>
     <string name="have_open_credit">Есть открытые кредиты</string>
-    <string name="small_text">(Ваші витрати на місяць на поточні потреби)</string>
+    <string name="first_radio_button">c прострочками</string>
+    <string name="second_radio_button">без прострочек</string>
     <string name="yor_month_transfer">Ваш ежемесячный платеж по кредитах</string>
 
     <!--activity_registration-->
@@ -71,15 +73,40 @@
     <!--activity_authorization-->
     <string name="login_user">Логин</string>
     <string name="password_user">Пароль</string>
-    <string name="false_password_or_login">Не могу вспомнить логин или пароль</string>
+    <string name="false_password_or_login">Не помню пароль</string>
+    <string name="entrance">Войти</string>
 
     <!--activity_web_registration-->
     <string name="yor_mail">E-mail</string>
     <string name="registratedToRecomendation">Я регистрируюсь по рекомендации</string>
     <string name="name_registration_button">Зарегистрироваться</string>
-
-    <!--activity_web_registration_recomendation-->
     <string name="from_user">От пользователя:</string>
+
+    <!--yor_choice_activity-->
+    <string name="yor_choice_credits">Кредиты</string>
+    <string name="yor_choice_bank_service">Банковские услуги</string>
+    <string name="yor_choice_deposit">Депозиты</string>
+
+    <!--navigation_activity-->
+    <string name="cash">Наличные</string>
+    <string name="credit_pledges">Кредит под залог</string>
+    <string name="mortgage">Ипотека</string>
+    <string name="avto_credit">Автокредит</string>
+    <string name="special_propouse">Специальные предложения</string>
+
+    <!--Special_propouse-->
+    <string name="tools">Ремонт</string>
+    <string name="not_work">Отдых</string>
+    <string name="shopping">Покупка товаров</string>
+    <string name="kredits_to_present">Кредит на подарок</string>
+    <string name="kredits_to_wedding">Кредит на свадьбу</string>
+    <string name="close_credits">Закрития кредитной задолжености</string>
+    <string name="close_debt">Погашения  долгов</string>
+    <string name="learning">Учебу</string>
+    <string name="helthing">Личения</string>
+
+    <!--Color-->
+    <color name="green">#00ff00</color>
 
     <!--Menu-->
     <string-array name="planets_array">

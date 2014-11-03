@@ -3,18 +3,14 @@
               android:id="@+id/main_layout"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:background="@drawable/back_phone"
+              android:background="@drawable/arrowed_back"
               android:layout_height="fill_parent"
         >
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-        <FrameLayout
-                android:id="@+id/navigFrgView"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-        </FrameLayout>
+
     </LinearLayout>
     <ViewFlipper
             android:id="@+id/flipper"
